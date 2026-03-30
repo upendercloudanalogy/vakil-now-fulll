@@ -1,0 +1,14 @@
+#!/bin/bash
+set -euo pipefail
+
+echo '🏗️ 👷 Running build before push 👷‍♂️🏗️'
+echo 'Please be patient, this may take a while...'
+
+if ! pnpm build; then
+    echo '❌❌❌ Build failed. Aborting Code Push. ❌❌❌'
+    echo '⚡️⚡️⚡️ PLEASE CHECK and FIX the errors before pushing ⚡️⚡️⚡️'
+    exit 1
+fi
+
+echo '✨🎉 Build passed: Proceeding with code push... 🚀✨🚀🏄‍♂️🍻'
+exit 0

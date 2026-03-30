@@ -1,0 +1,2805 @@
+{
+  "id": "00000000-0000-0000-0000-000000000000",
+  "prevId": "",
+  "version": "5",
+  "dialect": "mysql",
+  "tables": {
+    "admins": {
+      "name": "admins",
+      "columns": {
+        "id": {
+          "autoincrement": true,
+          "name": "id",
+          "type": "bigint unsigned",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "name": {
+          "autoincrement": false,
+          "name": "name",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "email": {
+          "autoincrement": false,
+          "name": "email",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "email_verified_at": {
+          "autoincrement": false,
+          "name": "email_verified_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "password": {
+          "autoincrement": false,
+          "name": "password",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "remember_token": {
+          "autoincrement": false,
+          "name": "remember_token",
+          "type": "varchar(100)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "created_at": {
+          "autoincrement": false,
+          "name": "created_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "updated_at": {
+          "autoincrement": false,
+          "name": "updated_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "phone": {
+          "autoincrement": false,
+          "name": "phone",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "address": {
+          "autoincrement": false,
+          "name": "address",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "city": {
+          "autoincrement": false,
+          "name": "city",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "state": {
+          "autoincrement": false,
+          "name": "state",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "dist": {
+          "autoincrement": false,
+          "name": "dist",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "pincode": {
+          "autoincrement": false,
+          "name": "pincode",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "profile_image": {
+          "autoincrement": false,
+          "name": "profile_image",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "username": {
+          "autoincrement": false,
+          "name": "username",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "status": {
+          "default": 2,
+          "autoincrement": false,
+          "name": "status",
+          "type": "enum('1','2')",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "country": {
+          "autoincrement": false,
+          "name": "country",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "otp": {
+          "autoincrement": false,
+          "name": "otp",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "otp_verify": {
+          "default": 0,
+          "autoincrement": false,
+          "name": "otp_verify",
+          "type": "enum('1','0')",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "pan_card_number": {
+          "autoincrement": false,
+          "name": "pan_card_number",
+          "type": "varchar(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "aadhar_number": {
+          "autoincrement": false,
+          "name": "aadhar_number",
+          "type": "varchar(20)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "refferal_code": {
+          "autoincrement": false,
+          "name": "refferal_code",
+          "type": "varchar(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "service": {
+          "autoincrement": false,
+          "name": "service",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "mpin": {
+          "autoincrement": false,
+          "name": "mpin",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "referral_id": {
+          "autoincrement": false,
+          "name": "referral_id",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "gender": {
+          "autoincrement": false,
+          "name": "gender",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "profile": {
+          "autoincrement": false,
+          "name": "profile",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "show_profile_public": {
+          "default": 0,
+          "autoincrement": false,
+          "name": "show_profile_public",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "pan_verify": {
+          "default": 0,
+          "autoincrement": false,
+          "name": "pan_verify",
+          "type": "enum('0','1')",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "aadhar_verify": {
+          "default": 0,
+          "autoincrement": false,
+          "name": "aadhar_verify",
+          "type": "enum('0','1')",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "user_type": {
+          "autoincrement": false,
+          "name": "user_type",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "compositePrimaryKeys": {
+        "admins_id": {
+          "name": "admins_id",
+          "columns": [
+            "id"
+          ]
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraint": {}
+    },
+    "api_details": {
+      "name": "api_details",
+      "columns": {
+        "id": {
+          "autoincrement": true,
+          "name": "id",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "platform_url": {
+          "autoincrement": false,
+          "name": "platform_url",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "app_id": {
+          "autoincrement": false,
+          "name": "app_id",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "serversecret": {
+          "autoincrement": false,
+          "name": "serversecret",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "app_channel_name": {
+          "autoincrement": false,
+          "name": "app_channel_name",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "status": {
+          "default": "'t'",
+          "autoincrement": false,
+          "name": "status",
+          "type": "enum('t','f')",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "compositePrimaryKeys": {
+        "api_details_id": {
+          "name": "api_details_id",
+          "columns": [
+            "id"
+          ]
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraint": {}
+    },
+    "blogmanager": {
+      "name": "blogmanager",
+      "columns": {
+        "id": {
+          "autoincrement": true,
+          "name": "id",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "title": {
+          "autoincrement": false,
+          "name": "title",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "slug": {
+          "autoincrement": false,
+          "name": "slug",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "description": {
+          "autoincrement": false,
+          "name": "description",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "image": {
+          "autoincrement": false,
+          "name": "image",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "status": {
+          "default": "'f'",
+          "autoincrement": false,
+          "name": "status",
+          "type": "enum('t','f')",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "created_at": {
+          "autoincrement": false,
+          "name": "created_at",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "updated_at": {
+          "autoincrement": false,
+          "name": "updated_at",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "compositePrimaryKeys": {
+        "blogmanager_id": {
+          "name": "blogmanager_id",
+          "columns": [
+            "id"
+          ]
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraint": {}
+    },
+    "callchat_logs_laywer_customer": {
+      "name": "callchat_logs_laywer_customer",
+      "columns": {
+        "id": {
+          "autoincrement": true,
+          "name": "id",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "customer_id": {
+          "autoincrement": false,
+          "name": "customer_id",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "lawyer_id": {
+          "autoincrement": false,
+          "name": "lawyer_id",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "total_call_duration": {
+          "autoincrement": false,
+          "name": "total_call_duration",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "start_time": {
+          "autoincrement": false,
+          "name": "start_time",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "end_time": {
+          "autoincrement": false,
+          "name": "end_time",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "total_charges": {
+          "autoincrement": false,
+          "name": "total_charges",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "created_at": {
+          "autoincrement": false,
+          "name": "created_at",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "chat_start_from_user_id": {
+          "autoincrement": false,
+          "name": "chat_start_from_user_id",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "user_type": {
+          "autoincrement": false,
+          "name": "user_type",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "updated_at": {
+          "autoincrement": false,
+          "name": "updated_at",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "status": {
+          "default": "'t'",
+          "autoincrement": false,
+          "name": "status",
+          "type": "enum('t','f')",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "live_status": {
+          "default": 0,
+          "autoincrement": false,
+          "name": "live_status",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "randomcallid": {
+          "autoincrement": false,
+          "name": "randomcallid",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "compositePrimaryKeys": {
+        "callchat_logs_laywer_customer_id": {
+          "name": "callchat_logs_laywer_customer_id",
+          "columns": [
+            "id"
+          ]
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraint": {}
+    },
+    "chat_history_laywer_customer": {
+      "name": "chat_history_laywer_customer",
+      "columns": {
+        "id": {
+          "autoincrement": true,
+          "name": "id",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "customer_id": {
+          "autoincrement": false,
+          "name": "customer_id",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "lawyer_id": {
+          "autoincrement": false,
+          "name": "lawyer_id",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "communication_start_datetime": {
+          "autoincrement": false,
+          "name": "communication_start_datetime",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "created_at": {
+          "autoincrement": false,
+          "name": "created_at",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "updated_at": {
+          "autoincrement": false,
+          "name": "updated_at",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "status": {
+          "default": "'t'",
+          "autoincrement": false,
+          "name": "status",
+          "type": "enum('t','f')",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "live_status": {
+          "default": 0,
+          "autoincrement": false,
+          "name": "live_status",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "chat_end_time": {
+          "default": "'0'",
+          "autoincrement": false,
+          "name": "chat_end_time",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "total_chat_time": {
+          "default": "'0'",
+          "autoincrement": false,
+          "name": "total_chat_time",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "total_lowyer_earn": {
+          "default": "'0'",
+          "autoincrement": false,
+          "name": "total_lowyer_earn",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "compositePrimaryKeys": {
+        "chat_history_laywer_customer_id": {
+          "name": "chat_history_laywer_customer_id",
+          "columns": [
+            "id"
+          ]
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraint": {}
+    },
+    "cities": {
+      "name": "cities",
+      "columns": {
+        "id": {
+          "autoincrement": true,
+          "name": "id",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "name": {
+          "autoincrement": false,
+          "name": "name",
+          "type": "varchar(30)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "state_id": {
+          "autoincrement": false,
+          "name": "state_id",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "view_count": {
+          "autoincrement": false,
+          "name": "view_count",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "created_at": {
+          "autoincrement": false,
+          "name": "created_at",
+          "type": "datetime",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "updated_at": {
+          "autoincrement": false,
+          "name": "updated_at",
+          "type": "datetime",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "compositePrimaryKeys": {
+        "cities_id": {
+          "name": "cities_id",
+          "columns": [
+            "id"
+          ]
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraint": {}
+    },
+    "countries": {
+      "name": "countries",
+      "columns": {
+        "id": {
+          "autoincrement": true,
+          "name": "id",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "sortname": {
+          "autoincrement": false,
+          "name": "sortname",
+          "type": "varchar(3)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "name": {
+          "autoincrement": false,
+          "name": "name",
+          "type": "varchar(150)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "phonecode": {
+          "autoincrement": false,
+          "name": "phonecode",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "compositePrimaryKeys": {
+        "countries_id": {
+          "name": "countries_id",
+          "columns": [
+            "id"
+          ]
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraint": {}
+    },
+    "documents_apply_management": {
+      "name": "documents_apply_management",
+      "columns": {
+        "id": {
+          "autoincrement": true,
+          "name": "id",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "user_id": {
+          "autoincrement": false,
+          "name": "user_id",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "usertype": {
+          "autoincrement": false,
+          "name": "usertype",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "documents_name": {
+          "autoincrement": false,
+          "name": "documents_name",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "documents_charge": {
+          "autoincrement": false,
+          "name": "documents_charge",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "created_at": {
+          "autoincrement": false,
+          "name": "created_at",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "updated_at": {
+          "autoincrement": false,
+          "name": "updated_at",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "status": {
+          "default": "'pending'",
+          "autoincrement": false,
+          "name": "status",
+          "type": "enum('pending','reject','process','complete')",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "upload_document": {
+          "autoincrement": false,
+          "name": "upload_document",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "request_user_phone": {
+          "autoincrement": false,
+          "name": "request_user_phone",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "request_username": {
+          "autoincrement": false,
+          "name": "request_username",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "compositePrimaryKeys": {
+        "documents_apply_management_id": {
+          "name": "documents_apply_management_id",
+          "columns": [
+            "id"
+          ]
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraint": {}
+    },
+    "documents_charges": {
+      "name": "documents_charges",
+      "columns": {
+        "id": {
+          "autoincrement": true,
+          "name": "id",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "amount": {
+          "autoincrement": false,
+          "name": "amount",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "status": {
+          "default": "'t'",
+          "autoincrement": false,
+          "name": "status",
+          "type": "enum('t','f')",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "compositePrimaryKeys": {
+        "documents_charges_id": {
+          "name": "documents_charges_id",
+          "columns": [
+            "id"
+          ]
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraint": {}
+    },
+    "expertservices": {
+      "name": "expertservices",
+      "columns": {
+        "id": {
+          "autoincrement": true,
+          "name": "id",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "title": {
+          "autoincrement": false,
+          "name": "title",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "price_start_from": {
+          "autoincrement": false,
+          "name": "price_start_from",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "slug": {
+          "autoincrement": false,
+          "name": "slug",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "description": {
+          "autoincrement": false,
+          "name": "description",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "image": {
+          "autoincrement": false,
+          "name": "image",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "status": {
+          "default": "'f'",
+          "autoincrement": false,
+          "name": "status",
+          "type": "enum('t','f')",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "created_at": {
+          "autoincrement": false,
+          "name": "created_at",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "updated_at": {
+          "autoincrement": false,
+          "name": "updated_at",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "compositePrimaryKeys": {
+        "expertservices_id": {
+          "name": "expertservices_id",
+          "columns": [
+            "id"
+          ]
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraint": {}
+    },
+    "hireme_lawyer_manager": {
+      "name": "hireme_lawyer_manager",
+      "columns": {
+        "id": {
+          "autoincrement": true,
+          "name": "id",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "user_id": {
+          "autoincrement": false,
+          "name": "user_id",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "usertype": {
+          "autoincrement": false,
+          "name": "usertype",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "lawyer_id": {
+          "autoincrement": false,
+          "name": "lawyer_id",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "status": {
+          "default": "'t'",
+          "autoincrement": false,
+          "name": "status",
+          "type": "enum('t','f')",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "created_at": {
+          "autoincrement": false,
+          "name": "created_at",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "updated_at": {
+          "autoincrement": false,
+          "name": "updated_at",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "compositePrimaryKeys": {
+        "hireme_lawyer_manager_id": {
+          "name": "hireme_lawyer_manager_id",
+          "columns": [
+            "id"
+          ]
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraint": {}
+    },
+    "language_manager": {
+      "name": "language_manager",
+      "columns": {
+        "id": {
+          "autoincrement": true,
+          "name": "id",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "title": {
+          "autoincrement": false,
+          "name": "title",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "slug": {
+          "autoincrement": false,
+          "name": "slug",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "status": {
+          "default": "'f'",
+          "autoincrement": false,
+          "name": "status",
+          "type": "enum('t','f')",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "created_at": {
+          "autoincrement": false,
+          "name": "created_at",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "updated_at": {
+          "autoincrement": false,
+          "name": "updated_at",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "compositePrimaryKeys": {
+        "language_manager_id": {
+          "name": "language_manager_id",
+          "columns": [
+            "id"
+          ]
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraint": {}
+    },
+    "lawyer_customer_documents": {
+      "name": "lawyer_customer_documents",
+      "columns": {
+        "id": {
+          "autoincrement": true,
+          "name": "id",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "lawyer_id": {
+          "autoincrement": false,
+          "name": "lawyer_id",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "customer_id": {
+          "autoincrement": false,
+          "name": "customer_id",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "documents": {
+          "autoincrement": false,
+          "name": "documents",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "created_at": {
+          "autoincrement": false,
+          "name": "created_at",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "updated_at": {
+          "autoincrement": false,
+          "name": "updated_at",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "usertype": {
+          "default": 1,
+          "autoincrement": false,
+          "name": "usertype",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "compositePrimaryKeys": {
+        "lawyer_customer_documents_id": {
+          "name": "lawyer_customer_documents_id",
+          "columns": [
+            "id"
+          ]
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraint": {}
+    },
+    "lawyer_settel_amount_history": {
+      "name": "lawyer_settel_amount_history",
+      "columns": {
+        "id": {
+          "autoincrement": true,
+          "name": "id",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "lawyer_id": {
+          "autoincrement": false,
+          "name": "lawyer_id",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "setteled_amount": {
+          "autoincrement": false,
+          "name": "setteled_amount",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "transaction_number": {
+          "autoincrement": false,
+          "name": "transaction_number",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "status": {
+          "default": 0,
+          "autoincrement": false,
+          "name": "status",
+          "type": "enum('0','1')",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "created_at": {
+          "autoincrement": false,
+          "name": "created_at",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "updated_at": {
+          "autoincrement": false,
+          "name": "updated_at",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "compositePrimaryKeys": {
+        "lawyer_settel_amount_history_id": {
+          "name": "lawyer_settel_amount_history_id",
+          "columns": [
+            "id"
+          ]
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraint": {}
+    },
+    "lawyer_wallet_manager": {
+      "name": "lawyer_wallet_manager",
+      "columns": {
+        "id": {
+          "autoincrement": true,
+          "name": "id",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "lawyer_id": {
+          "autoincrement": false,
+          "name": "lawyer_id",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "total_wallet_amount": {
+          "autoincrement": false,
+          "name": "total_wallet_amount",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "total_deduct_amount": {
+          "autoincrement": false,
+          "name": "total_deduct_amount",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "total_amount": {
+          "default": 0,
+          "autoincrement": false,
+          "name": "total_amount",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "total_admin_deduction": {
+          "default": 0,
+          "autoincrement": false,
+          "name": "total_admin_deduction",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "wallet_status": {
+          "default": 0,
+          "autoincrement": false,
+          "name": "wallet_status",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "updated_at": {
+          "autoincrement": false,
+          "name": "updated_at",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "created_at": {
+          "autoincrement": false,
+          "name": "created_at",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "compositePrimaryKeys": {
+        "lawyer_wallet_manager_id": {
+          "name": "lawyer_wallet_manager_id",
+          "columns": [
+            "id"
+          ]
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraint": {}
+    },
+    "lawyer_wallet_transacrion": {
+      "name": "lawyer_wallet_transacrion",
+      "columns": {
+        "id": {
+          "autoincrement": true,
+          "name": "id",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "lawyer_id": {
+          "autoincrement": false,
+          "name": "lawyer_id",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "customer_id": {
+          "autoincrement": false,
+          "name": "customer_id",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "amount_credit": {
+          "autoincrement": false,
+          "name": "amount_credit",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "amount_debit": {
+          "autoincrement": false,
+          "name": "amount_debit",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "created_at": {
+          "autoincrement": false,
+          "name": "created_at",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "updated_at": {
+          "autoincrement": false,
+          "name": "updated_at",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "compositePrimaryKeys": {
+        "lawyer_wallet_transacrion_id": {
+          "name": "lawyer_wallet_transacrion_id",
+          "columns": [
+            "id"
+          ]
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraint": {}
+    },
+    "low_category": {
+      "name": "low_category",
+      "columns": {
+        "id": {
+          "autoincrement": true,
+          "name": "id",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "low_category_name": {
+          "autoincrement": false,
+          "name": "low_category_name",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "low_category_sulg": {
+          "autoincrement": false,
+          "name": "low_category_sulg",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "created_at": {
+          "autoincrement": false,
+          "name": "created_at",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "updated_at": {
+          "autoincrement": false,
+          "name": "updated_at",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "status": {
+          "default": "'t'",
+          "autoincrement": false,
+          "name": "status",
+          "type": "enum('t','f')",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "description": {
+          "autoincrement": false,
+          "name": "description",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "image": {
+          "autoincrement": false,
+          "name": "image",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "compositePrimaryKeys": {
+        "low_category_id": {
+          "name": "low_category_id",
+          "columns": [
+            "id"
+          ]
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraint": {}
+    },
+    "sponsor_manager": {
+      "name": "sponsor_manager",
+      "columns": {
+        "id": {
+          "autoincrement": true,
+          "name": "id",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "title": {
+          "autoincrement": false,
+          "name": "title",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "slug": {
+          "autoincrement": false,
+          "name": "slug",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "url": {
+          "autoincrement": false,
+          "name": "url",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "image": {
+          "autoincrement": false,
+          "name": "image",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "status": {
+          "default": "'f'",
+          "autoincrement": false,
+          "name": "status",
+          "type": "enum('t','f')",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "created_at": {
+          "autoincrement": false,
+          "name": "created_at",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "updated_at": {
+          "autoincrement": false,
+          "name": "updated_at",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "compositePrimaryKeys": {
+        "sponsor_manager_id": {
+          "name": "sponsor_manager_id",
+          "columns": [
+            "id"
+          ]
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraint": {}
+    },
+    "states": {
+      "name": "states",
+      "columns": {
+        "id": {
+          "autoincrement": true,
+          "name": "id",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "name": {
+          "autoincrement": false,
+          "name": "name",
+          "type": "varchar(30)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "country_id": {
+          "default": 1,
+          "autoincrement": false,
+          "name": "country_id",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "compositePrimaryKeys": {
+        "states_id": {
+          "name": "states_id",
+          "columns": [
+            "id"
+          ]
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraint": {}
+    },
+    "testimonial_manager": {
+      "name": "testimonial_manager",
+      "columns": {
+        "id": {
+          "autoincrement": true,
+          "name": "id",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "title": {
+          "autoincrement": false,
+          "name": "title",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "profile": {
+          "autoincrement": false,
+          "name": "profile",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "slug": {
+          "autoincrement": false,
+          "name": "slug",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "description": {
+          "autoincrement": false,
+          "name": "description",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "image": {
+          "autoincrement": false,
+          "name": "image",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "status": {
+          "default": "'f'",
+          "autoincrement": false,
+          "name": "status",
+          "type": "enum('t','f')",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "created_at": {
+          "autoincrement": false,
+          "name": "created_at",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "updated_at": {
+          "autoincrement": false,
+          "name": "updated_at",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "compositePrimaryKeys": {
+        "testimonial_manager_id": {
+          "name": "testimonial_manager_id",
+          "columns": [
+            "id"
+          ]
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraint": {}
+    },
+    "user_account_management": {
+      "name": "user_account_management",
+      "columns": {
+        "id": {
+          "autoincrement": true,
+          "name": "id",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "user_id": {
+          "autoincrement": false,
+          "name": "user_id",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "account_name": {
+          "autoincrement": false,
+          "name": "account_name",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "bank_name": {
+          "autoincrement": false,
+          "name": "bank_name",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "account_number": {
+          "autoincrement": false,
+          "name": "account_number",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "account_ifsc": {
+          "autoincrement": false,
+          "name": "account_ifsc",
+          "type": "varchar(100)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "account_branch": {
+          "autoincrement": false,
+          "name": "account_branch",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "status": {
+          "default": "'t'",
+          "autoincrement": false,
+          "name": "status",
+          "type": "enum('t','f')",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "created_at": {
+          "autoincrement": false,
+          "name": "created_at",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "updated_at": {
+          "autoincrement": false,
+          "name": "updated_at",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "setprimary": {
+          "default": 0,
+          "autoincrement": false,
+          "name": "setprimary",
+          "type": "enum('0','1')",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "address": {
+          "autoincrement": false,
+          "name": "address",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "compositePrimaryKeys": {
+        "user_account_management_id": {
+          "name": "user_account_management_id",
+          "columns": [
+            "id"
+          ]
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraint": {}
+    },
+    "user_authentication": {
+      "name": "user_authentication",
+      "columns": {
+        "id": {
+          "autoincrement": true,
+          "name": "id",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "user_id": {
+          "autoincrement": false,
+          "name": "user_id",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "phonenumber": {
+          "autoincrement": false,
+          "name": "phonenumber",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "password": {
+          "autoincrement": false,
+          "name": "password",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "created_at": {
+          "autoincrement": false,
+          "name": "created_at",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "updated_at": {
+          "autoincrement": false,
+          "name": "updated_at",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "usertype": {
+          "default": 1,
+          "autoincrement": false,
+          "name": "usertype",
+          "type": "enum('1','2')",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "status": {
+          "default": 0,
+          "autoincrement": false,
+          "name": "status",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "otp": {
+          "autoincrement": false,
+          "name": "otp",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "otp_verify": {
+          "default": 0,
+          "autoincrement": false,
+          "name": "otp_verify",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "live_status": {
+          "default": 0,
+          "autoincrement": false,
+          "name": "live_status",
+          "type": "enum('1','0')",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "compositePrimaryKeys": {
+        "user_authentication_id": {
+          "name": "user_authentication_id",
+          "columns": [
+            "id"
+          ]
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraint": {}
+    },
+    "user_custom_low_category": {
+      "name": "user_custom_low_category",
+      "columns": {
+        "id": {
+          "autoincrement": true,
+          "name": "id",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "low_category_name": {
+          "autoincrement": false,
+          "name": "low_category_name",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "created_at": {
+          "autoincrement": false,
+          "name": "created_at",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "updated_at": {
+          "autoincrement": false,
+          "name": "updated_at",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "status": {
+          "default": "'t'",
+          "autoincrement": false,
+          "name": "status",
+          "type": "enum('t','f')",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "user_id": {
+          "autoincrement": false,
+          "name": "user_id",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "compositePrimaryKeys": {
+        "user_custom_low_category_id": {
+          "name": "user_custom_low_category_id",
+          "columns": [
+            "id"
+          ]
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraint": {}
+    },
+    "user_customer_manager": {
+      "name": "user_customer_manager",
+      "columns": {
+        "id": {
+          "autoincrement": true,
+          "name": "id",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "user_id": {
+          "autoincrement": false,
+          "name": "user_id",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "user_usertype": {
+          "autoincrement": false,
+          "name": "user_usertype",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "user_name": {
+          "autoincrement": false,
+          "name": "user_name",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "useremail": {
+          "autoincrement": false,
+          "name": "useremail",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "user_phone": {
+          "autoincrement": false,
+          "name": "user_phone",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "user_city_id": {
+          "autoincrement": false,
+          "name": "user_city_id",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "user_state_id": {
+          "autoincrement": false,
+          "name": "user_state_id",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "created_at": {
+          "autoincrement": false,
+          "name": "created_at",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "updated_at": {
+          "autoincrement": false,
+          "name": "updated_at",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "status": {
+          "default": "'t'",
+          "autoincrement": false,
+          "name": "status",
+          "type": "enum('t','f')",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "profile_photo": {
+          "autoincrement": false,
+          "name": "profile_photo",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "gender": {
+          "autoincrement": false,
+          "name": "gender",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "address": {
+          "autoincrement": false,
+          "name": "address",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "pincode": {
+          "autoincrement": false,
+          "name": "pincode",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "other_details": {
+          "autoincrement": false,
+          "name": "other_details",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "compositePrimaryKeys": {
+        "user_customer_manager_id": {
+          "name": "user_customer_manager_id",
+          "columns": [
+            "id"
+          ]
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraint": {}
+    },
+    "user_registration": {
+      "name": "user_registration",
+      "columns": {
+        "id": {
+          "autoincrement": true,
+          "name": "id",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "legal_problem": {
+          "autoincrement": false,
+          "name": "legal_problem",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "law_school_subject": {
+          "autoincrement": false,
+          "name": "law_school_subject",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "total_cases": {
+          "autoincrement": false,
+          "name": "total_cases",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "game_of_life": {
+          "autoincrement": false,
+          "name": "game_of_life",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "share_ultimate_legal_higklight": {
+          "autoincrement": false,
+          "name": "share_ultimate_legal_higklight",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "your_wishlist_of_wonder": {
+          "autoincrement": false,
+          "name": "your_wishlist_of_wonder",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "phone_number": {
+          "autoincrement": false,
+          "name": "phone_number",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "full_name": {
+          "autoincrement": false,
+          "name": "full_name",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "email_address": {
+          "autoincrement": false,
+          "name": "email_address",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "state": {
+          "autoincrement": false,
+          "name": "state",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "city": {
+          "autoincrement": false,
+          "name": "city",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "language": {
+          "autoincrement": false,
+          "name": "language",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "court_details": {
+          "autoincrement": false,
+          "name": "court_details",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "experience": {
+          "autoincrement": false,
+          "name": "experience",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "low_category": {
+          "autoincrement": false,
+          "name": "low_category",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "other_law_field": {
+          "autoincrement": false,
+          "name": "other_law_field",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "cartificate_enroll_no": {
+          "autoincrement": false,
+          "name": "cartificate_enroll_no",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "cartificate_upload": {
+          "autoincrement": false,
+          "name": "cartificate_upload",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "gender": {
+          "autoincrement": false,
+          "name": "gender",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "comfortability": {
+          "autoincrement": false,
+          "name": "comfortability",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "handling_pro_bono_cases": {
+          "autoincrement": false,
+          "name": "handling_pro_bono_cases",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "working_hours_from": {
+          "autoincrement": false,
+          "name": "working_hours_from",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "working_hours_to": {
+          "autoincrement": false,
+          "name": "working_hours_to",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "working_days": {
+          "autoincrement": false,
+          "name": "working_days",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "call_charges_per_minite": {
+          "autoincrement": false,
+          "name": "call_charges_per_minite",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "chat_charges_minite": {
+          "autoincrement": false,
+          "name": "chat_charges_minite",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "documents_charges": {
+          "autoincrement": false,
+          "name": "documents_charges",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "status": {
+          "default": "'p'",
+          "autoincrement": false,
+          "name": "status",
+          "type": "enum('t','f','h','p','d','0')",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "created_at": {
+          "autoincrement": false,
+          "name": "created_at",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "updated_at": {
+          "autoincrement": false,
+          "name": "updated_at",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "profile_id": {
+          "autoincrement": false,
+          "name": "profile_id",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "profile_photo": {
+          "autoincrement": false,
+          "name": "profile_photo",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "bar_council_id": {
+          "autoincrement": false,
+          "name": "bar_council_id",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "documentsupload1": {
+          "autoincrement": false,
+          "name": "documentsupload1",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "documentsupload2": {
+          "autoincrement": false,
+          "name": "documentsupload2",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "other_details": {
+          "autoincrement": false,
+          "name": "other_details",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "slug": {
+          "autoincrement": false,
+          "name": "slug",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "password": {
+          "autoincrement": false,
+          "name": "password",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "compositePrimaryKeys": {
+        "user_registration_id": {
+          "name": "user_registration_id",
+          "columns": [
+            "id"
+          ]
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraint": {}
+    },
+    "user_wallet": {
+      "name": "user_wallet",
+      "columns": {
+        "id": {
+          "autoincrement": true,
+          "name": "id",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "user_id": {
+          "autoincrement": false,
+          "name": "user_id",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "total_amount": {
+          "autoincrement": false,
+          "name": "total_amount",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "created_at": {
+          "autoincrement": false,
+          "name": "created_at",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "updated_at": {
+          "autoincrement": false,
+          "name": "updated_at",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "status": {
+          "default": "'t'",
+          "autoincrement": false,
+          "name": "status",
+          "type": "enum('t','f')",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "user_type": {
+          "default": 1,
+          "autoincrement": false,
+          "name": "user_type",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "compositePrimaryKeys": {
+        "user_wallet_id": {
+          "name": "user_wallet_id",
+          "columns": [
+            "id"
+          ]
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraint": {}
+    },
+    "user_wallet_transaction": {
+      "name": "user_wallet_transaction",
+      "columns": {
+        "id": {
+          "autoincrement": true,
+          "name": "id",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "user_id": {
+          "autoincrement": false,
+          "name": "user_id",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "credit_amount": {
+          "autoincrement": false,
+          "name": "credit_amount",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "debit_amount": {
+          "autoincrement": false,
+          "name": "debit_amount",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "created_at": {
+          "autoincrement": false,
+          "name": "created_at",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "updated_at": {
+          "autoincrement": false,
+          "name": "updated_at",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "description": {
+          "autoincrement": false,
+          "name": "description",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "transaction_mode": {
+          "autoincrement": false,
+          "name": "transaction_mode",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "status": {
+          "default": "'t'",
+          "autoincrement": false,
+          "name": "status",
+          "type": "enum('t','f')",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "chat_duration": {
+          "autoincrement": false,
+          "name": "chat_duration",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "user_type": {
+          "default": 1,
+          "autoincrement": false,
+          "name": "user_type",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "chatlawyerid": {
+          "default": 0,
+          "autoincrement": false,
+          "name": "chatlawyerid",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "randomcallid": {
+          "autoincrement": false,
+          "name": "randomcallid",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "compositePrimaryKeys": {
+        "user_wallet_transaction_id": {
+          "name": "user_wallet_transaction_id",
+          "columns": [
+            "id"
+          ]
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraint": {}
+    },
+    "users": {
+      "name": "users",
+      "columns": {
+        "id": {
+          "autoincrement": true,
+          "name": "id",
+          "type": "bigint unsigned",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "name": {
+          "autoincrement": false,
+          "name": "name",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "email": {
+          "autoincrement": false,
+          "name": "email",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "email_verified_at": {
+          "autoincrement": false,
+          "name": "email_verified_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "password": {
+          "autoincrement": false,
+          "name": "password",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "remember_token": {
+          "autoincrement": false,
+          "name": "remember_token",
+          "type": "varchar(100)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "created_at": {
+          "autoincrement": false,
+          "name": "created_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "updated_at": {
+          "autoincrement": false,
+          "name": "updated_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "phone": {
+          "autoincrement": false,
+          "name": "phone",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "address": {
+          "autoincrement": false,
+          "name": "address",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "city": {
+          "autoincrement": false,
+          "name": "city",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "state": {
+          "autoincrement": false,
+          "name": "state",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "dist": {
+          "autoincrement": false,
+          "name": "dist",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "pincode": {
+          "autoincrement": false,
+          "name": "pincode",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "profile_image": {
+          "autoincrement": false,
+          "name": "profile_image",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "username": {
+          "autoincrement": false,
+          "name": "username",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "status": {
+          "default": 2,
+          "autoincrement": false,
+          "name": "status",
+          "type": "enum('0','1','2')",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "country": {
+          "autoincrement": false,
+          "name": "country",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "otp": {
+          "autoincrement": false,
+          "name": "otp",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "otp_verify": {
+          "default": 0,
+          "autoincrement": false,
+          "name": "otp_verify",
+          "type": "enum('0','1')",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "pan_card_number": {
+          "autoincrement": false,
+          "name": "pan_card_number",
+          "type": "varchar(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "aadhar_number": {
+          "autoincrement": false,
+          "name": "aadhar_number",
+          "type": "varchar(20)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "refferal_code": {
+          "autoincrement": false,
+          "name": "refferal_code",
+          "type": "varchar(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "service": {
+          "autoincrement": false,
+          "name": "service",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "mpin": {
+          "autoincrement": false,
+          "name": "mpin",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "referral_id": {
+          "autoincrement": false,
+          "name": "referral_id",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "gender": {
+          "autoincrement": false,
+          "name": "gender",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "profile": {
+          "autoincrement": false,
+          "name": "profile",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "show_profile_public": {
+          "default": 0,
+          "autoincrement": false,
+          "name": "show_profile_public",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "pan_verify": {
+          "default": 0,
+          "autoincrement": false,
+          "name": "pan_verify",
+          "type": "enum('0','1')",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "aadhar_verify": {
+          "default": 0,
+          "autoincrement": false,
+          "name": "aadhar_verify",
+          "type": "enum('0','1')",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "user_type": {
+          "autoincrement": false,
+          "name": "user_type",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "compositePrimaryKeys": {
+        "users_id": {
+          "name": "users_id",
+          "columns": [
+            "id"
+          ]
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraint": {}
+    },
+    "vakil_working_days": {
+      "name": "vakil_working_days",
+      "columns": {
+        "id": {
+          "autoincrement": true,
+          "name": "id",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "day_name": {
+          "autoincrement": false,
+          "name": "day_name",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "from_hh": {
+          "autoincrement": false,
+          "name": "from_hh",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "from_mm": {
+          "autoincrement": false,
+          "name": "from_mm",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "to_hh": {
+          "autoincrement": false,
+          "name": "to_hh",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "to_mm": {
+          "autoincrement": false,
+          "name": "to_mm",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "created_at": {
+          "autoincrement": false,
+          "name": "created_at",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "updated_at": {
+          "autoincrement": false,
+          "name": "updated_at",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "user_id": {
+          "autoincrement": false,
+          "name": "user_id",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "phonenumber": {
+          "autoincrement": false,
+          "name": "phonenumber",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "compositePrimaryKeys": {
+        "vakil_working_days_id": {
+          "name": "vakil_working_days_id",
+          "columns": [
+            "id"
+          ]
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraint": {}
+    }
+  },
+  "views": {},
+  "_meta": {
+    "schemas": {},
+    "tables": {},
+    "columns": {}
+  },
+  "internal": {
+    "tables": {},
+    "indexes": {}
+  }
+}

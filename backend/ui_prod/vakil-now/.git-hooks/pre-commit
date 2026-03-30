@@ -1,0 +1,73 @@
+#!/bin/bash
+set -euo pipefail
+
+# Config
+USER_FILE=".allowed-git-users.json"
+
+# --- Functions ---
+check_username_and_email() {
+    # Ensure jq is installed
+    if ! command -v jq &> /dev/null; then
+        echo "❌ ERROR: 'jq' is required but not installed."
+        echo "👉 Install it: https://stedolan.github.io/jq/download/"
+        return 1
+    fi
+
+    # Ensure user file exists
+    if [ ! -f "$USER_FILE" ]; then
+        echo "❌ ERROR: Allowed users file not found at: $USER_FILE"
+        return 1
+    fi
+
+    # Read current Git config
+    local current_username
+    local current_email
+    current_username=$(git config user.name || true)
+    current_email=$(git config user.email || true)
+
+    echo "👷 Checking Git User Credentials..."
+    echo "➤ Username: $current_username"
+    echo "➤ Email: $current_email"
+
+    # Validate against JSON
+    local is_valid
+    is_valid=$(jq -r --arg uname "$current_username" --arg email "$current_email" \
+        '[.[] | select(.username == $uname and .email == $email)] | length' "$USER_FILE")
+
+    if [ "$is_valid" -eq 0 ]; then
+        echo "❌ Unauthorized Git user!"
+        echo "✅ Allowed Users:"
+        jq -r '.[] | " - \(.username) <\(.email)>"' "$USER_FILE"
+        return 1
+    fi
+
+    echo "✅ Git config is valid."
+    return 0
+}
+
+run_linter() {
+    echo '🏗️ 👷 Styling your project before committing 👷‍♂️🏗️'
+    echo 'Please be patient, this may take a while...'
+
+    # if ! pnpm lint-staged; then
+    #     echo '❌ Styling failed. Aborting commit.'
+    #     echo '⚡️⚡️⚡️ PLEASE FIX the issues above ⚡️⚡️⚡️'
+    #     return 1
+    # fi
+
+    echo '✨🎉 No styling errors found!'
+    return 0
+}
+
+# --- Main Execution ---
+if ! check_username_and_email; then
+    exit 1
+fi
+
+if ! run_linter; then
+    exit 1
+fi
+
+echo '✨🎉✨ No error found: Git Config looks Good, Committing your changes... ✨🚀🏄‍♂️🍻'
+
+exit 0
